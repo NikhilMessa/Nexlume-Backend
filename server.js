@@ -10,6 +10,9 @@ import "dotenv/config";
 
 import projectsRouter from "./routes/projects.js";
 
+
+import teamRouter from "./routes/team.js";
+
 dotenv.config();
 
 const app = express();
@@ -27,7 +30,9 @@ app.use(
 
 /* Routes */
 app.get("/api/health", (req, res) => res.json({ ok: true }));
+app.use("/api/team", teamRouter);
 app.use("/api/projects", projectsRouter);
+
 
 /* Start with Mongo */
 const PORT = process.env.PORT || 5000;
