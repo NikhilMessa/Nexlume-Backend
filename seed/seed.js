@@ -5,18 +5,18 @@ import Project from "../models/Project.js";
 
 const seedData = [
   // ===========================
-  // 1️⃣ Next Ventures
+  // 1️⃣ SAFARNAMA - Tours and Travel
   // ===========================
   {
     id: 1,
-    slug: "next-ventures",
-    title: "Next Ventures",
+    slug: "safarnama",
+    title: "SAFARNAMA",
     subtitle:
-      "A platform designed for early-stage entrepreneurs to pitch, browse, and engage with startup ideas. It's built to impress both users and investors with blazing speed, compelling visuals, and a modern tech stack.",
+      "Embark on extraordinary journeys with Safarnama, where every trip is crafted to perfection. From breathtaking landscapes to cultural wonders, we curate seamless itineraries and exclusive experiences tailored for modern explorers. Whether it's a solo adventure, a romantic getaway, or a group expedition, we ensure hassle-free travel, unforgettable memories, and stories worth sharing. Let's turn your travel dreams into reality! 🌍✈️",
     description: [
-      "Leveraged Partial Prerendering and After for faster loading.",
-      "Simplified idea submission with a clean, intuitive design.",
-      "Enhanced browsing with seamless performance optimization.",
+      "Built with React and MongoDB for seamless booking experience.",
+      "Responsive design using Bootstrap and custom CSS.",
+      "Integrated payment gateway and user authentication.",
     ],
     image: "https://picsum.photos/id/1015/1200/800",
     screenshots: [
@@ -24,56 +24,53 @@ const seedData = [
       "https://picsum.photos/id/1017/1200/800",
       "https://picsum.photos/id/1018/1200/800",
     ],
-    gradient: "linear-gradient(135deg, #ff0077, #ff4dc4)",
-    color: "#060010",
-    glowColor: "132, 0, 255",
+    gradient: "linear-gradient(135deg, #00a8ff, #0097e6)",
+    color: "#001a2e",
+    glowColor: "0, 168, 255",
     tags: [
-      "Next.js",
       "React",
-      "Tailwind CSS",
-      "TypeScript",
-      "Motion.dev",
-      "Sanity CMS",
-      "Auth.js",
-      "Markdown",
-      "GROQ",
-      "Sentry",
+      "MongoDB",
+      "Node.js",
+      "Bootstrap",
+      "HTML",
+      "CSS",
+      "JavaScript",
     ],
-    palette: ["#060010", "#ff0077", "#ff4dc4", "#ffffff"],
+    palette: ["#001a2e", "#00a8ff", "#0097e6", "#ffffff"],
     typography: {
-      headings: "Poppins",
-      body: "Inter",
+      headings: "Montserrat",
+      body: "Open Sans",
       align: "left",
       google: true,
     },
     links: {
-      demo: "https://nextventures-demo.vercel.app",
-      repo: "https://github.com/nikhilmessa/next-ventures",
+      demo: "https://safarnama-demo.vercel.app",
+      repo: "https://github.com/nikhilmessa/safarnama",
     },
     role: "Full-stack Developer",
-    timeline: "Aug 2025 – Oct 2025",
+    timeline: "Jan 2025 – Mar 2025",
     cards: [
       {
         type: "overview",
         label: "Overview",
-        title: "Next Ventures",
+        title: "SAFARNAMA",
         description:
-          "Pitch platform connecting founders and investors with real-time analytics and collaboration.",
+          "Travel booking platform connecting travelers with curated tour packages and seamless booking experiences.",
       },
       {
         type: "list",
         label: "Features",
         title: "Core Highlights",
         items: [
-          "Startup idea submission and feedback",
-          "Founder–Investor matching algorithm",
-          "AI-powered pitch analysis",
+          "Tour package browsing and booking",
+          "User dashboard and booking management",
+          "Secure payment integration",
         ],
       },
       {
         type: "tech",
         label: "Tech Stack",
-        items: ["Next.js", "TypeScript", "Sanity CMS", "Auth.js"],
+        items: ["React", "MongoDB", "Node.js", "Bootstrap", "HTML", "CSS"],
       },
       {
         type: "gallery",
@@ -92,32 +89,32 @@ const seedData = [
         type: "metrics",
         label: "Performance",
         metrics: [
-          { label: "Lighthouse", value: "99%" },
-          { label: "SEO Score", value: "98%" },
-          { label: "Uptime", value: "100%" },
+          { label: "Lighthouse", value: "95%" },
+          { label: "SEO Score", value: "92%" },
+          { label: "Uptime", value: "99%" },
         ],
       },
       {
         type: "richtext",
         label: "Learnings",
-        html: "<ul><li>Improved UI composition with modular design</li><li>Enhanced SEO optimization with Next.js</li></ul>",
+        html: "<ul><li>Improved state management in React</li><li>Enhanced MongoDB query optimization</li></ul>",
       },
     ],
   },
 
   // ===========================
-  // 2️⃣ CodeVerse
+  // 2️⃣ NEXSHOW - Movie Booking
   // ===========================
   {
     id: 2,
-    slug: "codeverse",
-    title: "CodeVerse",
+    slug: "nexshow",
+    title: "NEXSHOW",
     subtitle:
-      "A collaborative platform for developers to share, learn, and grow through interactive coding sessions and challenges.",
+      "Book your favorite movies effortlessly with NexShow, your one-stop destination for seamless movie ticket booking. Discover the latest blockbusters, explore showtimes, and secure the best seats—all with a few clicks. Whether it's an action-packed thriller, a heartwarming romance, or a family-friendly film, NexShow ensures a hassle-free booking experience. Enjoy the magic of cinema like never before! 🎬🍿",
     description: [
-      "Real-time code sharing with live sessions.",
-      "Gamified challenges with leaderboard integration.",
-      "Enhanced collaboration using WebSockets and cloud storage.",
+      "Built with React and MongoDB for dynamic movie booking.",
+      "Responsive design using Bootstrap and custom CSS.",
+      "Real-time seat selection and secure payment integration.",
     ],
     image: "https://picsum.photos/id/1025/1200/800",
     screenshots: [
@@ -125,54 +122,57 @@ const seedData = [
       "https://picsum.photos/id/1027/1200/800",
       "https://picsum.photos/id/1028/1200/800",
     ],
-    gradient: "linear-gradient(135deg, #0077ff, #8a2be2)",
-    color: "#080022",
-    glowColor: "0, 119, 255",
+    gradient: "linear-gradient(135deg, #e74c3c, #c0392b)",
+    color: "#1a0000",
+    glowColor: "231, 76, 60",
     tags: [
       "React",
-      "Node.js",
-      "Tailwind CSS",
-      "Socket.io",
       "MongoDB",
-      "Framer Motion",
-      "Firebase",
+      "Node.js",
+      "Bootstrap",
+      "HTML",
+      "CSS",
+      "JavaScript",
     ],
-    palette: ["#080022", "#0077ff", "#8a2be2", "#ffffff"],
+    palette: ["#1a0000", "#e74c3c", "#c0392b", "#ffffff"],
     typography: {
-      headings: "Fira Code",
-      body: "Inter",
+      headings: "Oswald",
+      body: "Roboto",
       align: "left",
       google: true,
     },
     links: {
-      demo: "https://codeverse-demo.vercel.app",
-      repo: "https://github.com/nikhilmessa/codeverse",
+      demo: "https://nexshow-demo.vercel.app",
+      repo: "https://github.com/nikhilmessa/nexshow",
     },
-    role: "Frontend Engineer",
-    timeline: "May 2025 – Jul 2025",
+    role: "Full-stack Developer",
+    timeline: "Apr 2025 – Jun 2025",
     cards: [
       {
         type: "overview",
-        title: "CodeVerse Overview",
+        label: "Overview",
+        title: "NEXSHOW",
         description:
-          "A multiplayer coding playground enabling collaborative sessions, code-sharing, and challenges.",
+          "Movie ticket booking platform with seat selection and showtime management.",
       },
       {
         type: "list",
         label: "Features",
+        title: "Core Highlights",
         items: [
-          "Real-time WebSocket collaboration",
-          "Gamified ranking system",
-          "Team-based hack sessions",
+          "Interactive seat selection",
+          "Movie browsing and showtimes",
+          "Secure booking and payment",
         ],
       },
       {
         type: "tech",
-        items: ["React", "Node.js", "Socket.io", "Firebase"],
+        label: "Tech Stack",
+        items: ["React", "MongoDB", "Node.js", "Bootstrap", "HTML", "CSS"],
       },
       {
         type: "gallery",
-        label: "Snapshots",
+        label: "Gallery",
         images: [
           "https://picsum.photos/id/1029/1200/800",
           "https://picsum.photos/id/1030/1200/800",
@@ -180,28 +180,39 @@ const seedData = [
         ],
       },
       {
+        type: "links",
+        label: "Links",
+      },
+      {
         type: "metrics",
+        label: "Performance",
         metrics: [
-          { label: "Active Users", value: "5k+" },
-          { label: "Sessions Hosted", value: "12k+" },
+          { label: "Lighthouse", value: "94%" },
+          { label: "SEO Score", value: "91%" },
+          { label: "Uptime", value: "98%" },
         ],
+      },
+      {
+        type: "richtext",
+        label: "Learnings",
+        html: "<ul><li>Implemented seat selection system</li><li>Enhanced real-time booking features</li></ul>",
       },
     ],
   },
 
   // ===========================
-  // 3️⃣ FluxLura Converter
+  // 3️⃣ STYLORA - E-commerce
   // ===========================
   {
     id: 3,
-    slug: "fluxlura-converter",
-    title: "FluxLura Converter",
+    slug: "stylora",
+    title: "STYLORA",
     subtitle:
-      "A free online converter tool for seamless multimedia conversion. Effortlessly transform images, audio, and videos with a sleek, modern design.",
+      "Step into a world of trendsetting fashion with Stylora, your go-to destination for the latest styles and timeless classics. From chic casuals to elegant formals, we bring you a curated collection of apparel that blends quality, comfort, and sophistication. Shop effortlessly, stay ahead of trends, and express your unique style with Stylora—where fashion meets convenience! 👗🛍️",
     description: [
-      "Built with Next.js and optimized with Media.dev for file conversion.",
-      "Leveraged FFmpeg for powerful media processing.",
-      "Responsive and intuitive UI for a smooth user experience.",
+      "Built with React and MongoDB for interactive shopping experience.",
+      "Responsive design using Bootstrap and custom CSS.",
+      "Shopping cart and secure checkout with payment integration.",
     ],
     image: "https://picsum.photos/id/1035/1200/800",
     screenshots: [
@@ -209,113 +220,80 @@ const seedData = [
       "https://picsum.photos/id/1037/1200/800",
       "https://picsum.photos/id/1038/1200/800",
     ],
-    gradient: "linear-gradient(135deg, #00ffaa, #00ccff)",
-    color: "#001b1b",
-    glowColor: "0, 255, 170",
-    tags: ["Next.js", "React", "Tailwind CSS", "TypeScript", "FFmpeg", "Node.js", "Vercel"],
-    palette: ["#001b1b", "#00ffaa", "#00ccff", "#ffffff"],
-    typography: {
-      headings: "Montserrat",
-      body: "Roboto",
-      align: "center",
-      google: true,
-    },
-    links: {
-      demo: "https://fluxlura.vercel.app",
-      repo: "https://github.com/nikhilmessa/fluxlura",
-    },
-    role: "Full-stack Developer",
-    timeline: "Mar 2025 – Apr 2025",
-    cards: [
-      {
-        type: "overview",
-        description:
-          "Built an efficient multimedia converter using FFmpeg and Next.js for cross-platform performance.",
-      },
-      {
-        type: "tech",
-        items: ["FFmpeg", "Next.js", "Tailwind CSS", "TypeScript"],
-      },
-      {
-        type: "gallery",
-        images: [
-          "https://picsum.photos/id/1039/1200/800",
-          "https://picsum.photos/id/1040/1200/800",
-        ],
-      },
-      {
-        type: "links",
-      },
-    ],
-  },
-
-  // ===========================
-  // 4️⃣ AI StarForge
-  // ===========================
-  {
-    id: 4,
-    slug: "ai-starforge",
-    title: "AI StarForge",
-    subtitle:
-      "A sleek AI SaaS landing page with a user-friendly design that enhances engagement.",
-    description: [
-      "Optimized landing flow for high conversion rates.",
-      "Integrated with OpenAI for dynamic chat experiences.",
-      "Modern layout powered by Next.js and Framer Motion.",
-    ],
-    image: "https://picsum.photos/id/1045/1200/800",
-    screenshots: [
-      "https://picsum.photos/id/1046/1200/800",
-      "https://picsum.photos/id/1047/1200/800",
-      "https://picsum.photos/id/1048/1200/800",
-    ],
-    gradient: "linear-gradient(135deg, #ff6600, #ff0080)",
-    color: "#0a0010",
-    glowColor: "255, 0, 128",
+    gradient: "linear-gradient(135deg, #9b59b6, #e91e63)",
+    color: "#1a0a1a",
+    glowColor: "155, 89, 182",
     tags: [
-      "Next.js",
       "React",
-      "Framer Motion",
-      "Tailwind CSS",
-      "OpenAI API",
-      "TypeScript",
+      "MongoDB",
+      "Node.js",
+      "Bootstrap",
+      "HTML",
+      "CSS",
+      "JavaScript",
     ],
-    palette: ["#0a0010", "#ff6600", "#ff0080", "#ffffff"],
+    palette: ["#1a0a1a", "#9b59b6", "#e91e63", "#ffffff"],
     typography: {
-      headings: "Manrope",
-      body: "Inter",
+      headings: "Playfair Display",
+      body: "Lato",
       align: "left",
       google: true,
     },
     links: {
-      demo: "https://aistarforge.vercel.app",
-      repo: "https://github.com/nikhilmessa/aistarforge",
+      demo: "https://stylora-demo.vercel.app",
+      repo: "https://github.com/nikhilmessa/stylora",
     },
-    role: "Frontend Engineer",
-    timeline: "Jan 2025 – Feb 2025",
+    role: "Full-stack Developer",
+    timeline: "Jul 2025 – Sep 2025",
     cards: [
       {
         type: "overview",
+        label: "Overview",
+        title: "STYLORA",
         description:
-          "AI SaaS landing page integrating OpenAI APIs for dynamic content generation and user interaction.",
+          "Fashion e-commerce platform with product catalog and seamless shopping experience.",
       },
       {
         type: "list",
+        label: "Features",
+        title: "Core Highlights",
         items: [
-          "OpenAI API Integration",
-          "Animated UI with Framer Motion",
-          "High conversion optimized landing flow",
+          "Product catalog and filtering",
+          "Shopping cart and checkout",
+          "User accounts and order management",
         ],
       },
       {
+        type: "tech",
+        label: "Tech Stack",
+        items: ["React", "MongoDB", "Node.js", "Bootstrap", "HTML", "CSS"],
+      },
+      {
         type: "gallery",
+        label: "Gallery",
         images: [
-          "https://picsum.photos/id/1049/1200/800",
-          "https://picsum.photos/id/1050/1200/800",
+          "https://picsum.photos/id/1039/1200/800",
+          "https://picsum.photos/id/1040/1200/800",
+          "https://picsum.photos/id/1041/1200/800",
         ],
       },
       {
         type: "links",
+        label: "Links",
+      },
+      {
+        type: "metrics",
+        label: "Performance",
+        metrics: [
+          { label: "Lighthouse", value: "93%" },
+          { label: "SEO Score", value: "90%" },
+          { label: "Uptime", value: "97%" },
+        ],
+      },
+      {
+        type: "richtext",
+        label: "Learnings",
+        html: "<ul><li>Enhanced e-commerce cart management</li><li>Improved product filtering and search</li></ul>",
       },
     ],
   },
