@@ -22,7 +22,7 @@ export const enrollTeam = async (req, res) => {
       },
     });
 
-    const subject = "🚀 Exciting Internship Opportunities at NexLume";
+    const subject = "🚀 Exciting Team Opportunities at NexLume";
 
     const html = `
       <p>Dear ${candidateName},</p>
