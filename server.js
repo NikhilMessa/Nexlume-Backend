@@ -6,6 +6,8 @@ import cors from "cors";
 import helmet from "helmet";
 import morgan from "morgan";
 import "dotenv/config";
+import cors from "cors";
+
 
 
 import projectsRouter from "./routes/projects.js";
@@ -25,6 +27,16 @@ app.use(
   cors({
     origin: (origin, cb) => cb(null, true) // allow all in dev
     // origin: process.env.CORS_ORIGIN?.split(",") ?? "*", // stricter option
+  })
+);
+app.use(
+  cors({
+    origin: [
+      "http://localhost:5173",          // local dev
+      "https://nexlume-ten.vercel.app"   // live frontend
+    ],
+    methods: ["GET", "POST", "PUT", "DELETE"],
+    credentials: true,
   })
 );
 
