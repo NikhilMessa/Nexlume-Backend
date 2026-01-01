@@ -12,13 +12,13 @@ const seedData = [
     slug: "safarnama",
     title: "SAFARNAMA",
     subtitle:
-      "Embark on extraordinary journeys with Safarnama, where every trip is crafted to perfection. From breathtaking landscapes to cultural wonders, we curate seamless itineraries and exclusive experiences tailored for modern explorers. Whether it's a solo adventure, a romantic getaway, or a group expedition, we ensure hassle-free travel, unforgettable memories, and stories worth sharing. Let's turn your travel dreams into reality! 🌍✈️",
+      "Embark on extraordinary journeys with Safarnama, where every trip is crafted to perfection.Let's turn your travel dreams into reality! 🌍✈️",
     description: [
       "Built with React and MongoDB for seamless booking experience.",
       "Responsive design using Bootstrap and custom CSS.",
       "Integrated payment gateway and user authentication.",
     ],
-    image: "https://picsum.photos/id/1015/1200/800",
+    image: "https://res.cloudinary.com/da2ufcgyv/image/upload/v1767291964/safarnama_1_ycg0p7.png",
     screenshots: [
       "https://picsum.photos/id/1016/1200/800",
       "https://picsum.photos/id/1017/1200/800",
@@ -110,13 +110,13 @@ const seedData = [
     slug: "nexshow",
     title: "NEXSHOW",
     subtitle:
-      "Book your favorite movies effortlessly with NexShow, your one-stop destination for seamless movie ticket booking. Discover the latest blockbusters, explore showtimes, and secure the best seats—all with a few clicks. Whether it's an action-packed thriller, a heartwarming romance, or a family-friendly film, NexShow ensures a hassle-free booking experience. Enjoy the magic of cinema like never before! 🎬🍿",
+      "Book your favorite movies effortlessly with NexShow, your one-stop destination for seamless movie ticket booking.Enjoy the magic of cinema like never before! 🎬🍿",
     description: [
       "Built with React and MongoDB for dynamic movie booking.",
       "Responsive design using Bootstrap and custom CSS.",
       "Real-time seat selection and secure payment integration.",
     ],
-    image: "https://picsum.photos/id/1025/1200/800",
+    image: "https://res.cloudinary.com/da2ufcgyv/image/upload/v1767291962/nexshow_1_dwprxc.png",
     screenshots: [
       "https://picsum.photos/id/1026/1200/800",
       "https://picsum.photos/id/1027/1200/800",
@@ -208,13 +208,13 @@ const seedData = [
     slug: "stylora",
     title: "STYLORA",
     subtitle:
-      "Step into a world of trendsetting fashion with Stylora, your go-to destination for the latest styles and timeless classics. From chic casuals to elegant formals, we bring you a curated collection of apparel that blends quality, comfort, and sophistication. Shop effortlessly, stay ahead of trends, and express your unique style with Stylora—where fashion meets convenience! 👗🛍️",
+      "Step into a world of trendsetting fashion with Stylora, your go-to destination for the latest styles and timeless classics.Stylora—where fashion meets convenience! 👗🛍️",
     description: [
       "Built with React and MongoDB for interactive shopping experience.",
       "Responsive design using Bootstrap and custom CSS.",
       "Shopping cart and secure checkout with payment integration.",
     ],
-    image: "https://picsum.photos/id/1035/1200/800",
+    image: "https://res.cloudinary.com/da2ufcgyv/image/upload/v1767291809/stylora1_bhqqli.png",
     screenshots: [
       "https://picsum.photos/id/1036/1200/800",
       "https://picsum.photos/id/1037/1200/800",
@@ -297,6 +297,209 @@ const seedData = [
       },
     ],
   },
+
+    {
+      id: 4,
+      slug: "kenzo-fitness",
+      title: "KENZO FITNESS",
+      subtitle:
+        "Transform your fitness brand’s online presence with Kenzo Fitness — a modern, animated, and fully responsive gym website.💪🔥",
+      description: [
+        "Built using HTML, CSS, and JavaScript for a fast and lightweight experience.",
+        "Modern UI with glassmorphism, animations, and responsive layouts.",
+        "Interactive sections including sliders, flip cards, and modal-based contact form.",
+      ],
+      image:
+        "https://res.cloudinary.com/da2ufcgyv/image/upload/v1767291523/GYM_xiwrgu.png",
+      screenshots: [
+        "https://picsum.photos/id/1050/1200/800",
+        "https://picsum.photos/id/1051/1200/800",
+        "https://picsum.photos/id/1052/1200/800",
+      ],
+      gradient: "linear-gradient(135deg, #0f2027, #203a43, #2c5364)",
+      color: "#0b0f14",
+      glowColor: "193, 255, 0",
+      tags: [
+        "HTML",
+        "CSS",
+        "JavaScript",
+        "Responsive Design",
+        "Animations",
+        "UI/UX",
+      ],
+      palette: ["#0b0f14", "#c1ff00", "#ffffff", "#1f2933"],
+      typography: {
+        headings: "Montserrat",
+        body: "Montserrat",
+        align: "left",
+        google: true,
+      },
+      links: {
+        demo: "https://kenzo-fitness.vercel.app/",
+        repo: "https://github.com/AmanMishra107/kenzo-fitness",
+      },
+      role: "Frontend Developer",
+      timeline: "May 2025 – Jun 2025",
+      cards: [
+        {
+          type: "overview",
+          label: "Overview",
+          title: "KENZO FITNESS",
+          description:
+            "A modern, animated, and responsive gym & fitness website designed to showcase training programs, testimonials, and brand identity.",
+        },
+        {
+          type: "list",
+          label: "Features",
+          title: "Core Highlights",
+          items: [
+            "Glassmorphism header with smooth navigation",
+            "Hero section with animated floating metrics",
+            "Training plans with interactive flip cards",
+            "Testimonials and brand slider",
+            "Responsive layout with mobile-first design",
+          ],
+        },
+        {
+          type: "tech",
+          label: "Tech Stack",
+          items: ["HTML5", "CSS3", "JavaScript (ES6+)", "Responsive Design"],
+        },
+        {
+          type: "gallery",
+          label: "Gallery",
+          images: [
+            "https://picsum.photos/id/1053/1200/800",
+            "https://picsum.photos/id/1054/1200/800",
+            "https://picsum.photos/id/1055/1200/800",
+          ],
+        },
+        {
+          type: "links",
+          label: "Links",
+        },
+        {
+          type: "metrics",
+          label: "Performance",
+          metrics: [
+            { label: "Lighthouse", value: "95%" },
+            { label: "Mobile Friendly", value: "100%" },
+            { label: "Load Speed", value: "Fast" },
+          ],
+        },
+        {
+          type: "richtext",
+          label: "Learnings",
+          html:
+            "<ul><li>Improved animation performance using pure CSS</li><li>Enhanced responsive layouts for fitness-focused UI</li><li>Built reusable UI components without frameworks</li></ul>",
+        },
+      ],
+    },
+    {
+      id: 5,
+      slug: "real-estate-property",
+      title: "REAL ESTATE PROPERTY",
+      subtitle:
+        "A full-featured real estate property management platform designed to simplify property listings, client interactions, and administrative workflows.🏠📊",
+      description: [
+        "Developed using Angular CLI for a dynamic and modular frontend.",
+        "Backend powered by ASP.NET with SQL Server for secure data handling.",
+        "End-to-end property listing, inquiry, and management workflow.",
+      ],
+      image:
+        "https://res.cloudinary.com/da2ufcgyv/image/upload/v1767293532/real_sf4u6j.png",
+      screenshots: [
+        "https://picsum.photos/id/1060/1200/800",
+        "https://picsum.photos/id/1061/1200/800",
+        "https://picsum.photos/id/1062/1200/800",
+      ],
+      gradient: "linear-gradient(135deg, #1e3c72, #2a5298)",
+      color: "#0f1b2d",
+      glowColor: "30, 60, 114",
+      tags: [
+        "Angular",
+        "ASP.NET",
+        "SQL Server",
+        "TypeScript",
+        "REST API",
+        "Enterprise App",
+      ],
+      palette: ["#0f1b2d", "#2a5298", "#ffffff", "#eaeaea"],
+      typography: {
+        headings: "Poppins",
+        body: "Roboto",
+        align: "left",
+        google: true,
+      },
+      links: {
+        demo: "#",
+        repo: "#",
+      },
+      role: "Full-stack Developer",
+      timeline: "Aug 2025 – Oct 2025",
+      cards: [
+        {
+          type: "overview",
+          label: "Overview",
+          title: "REAL ESTATE PROPERTY",
+          description:
+            "A scalable real estate property management system enabling listing, search, inquiry handling, and administrative control.",
+        },
+        {
+          type: "list",
+          label: "Features",
+          title: "Core Highlights",
+          items: [
+            "Property listing with advanced filters",
+            "User roles for admin, agents, and customers",
+            "Inquiry and contact management",
+            "Secure authentication and authorization",
+            "Dashboard for property and user management",
+          ],
+        },
+        {
+          type: "tech",
+          label: "Tech Stack",
+          items: [
+            "Angular CLI",
+            "ASP.NET",
+            "SQL Server",
+            "TypeScript",
+            "RESTful APIs",
+          ],
+        },
+        {
+          type: "gallery",
+          label: "Gallery",
+          images: [
+            "https://picsum.photos/id/1063/1200/800",
+            "https://picsum.photos/id/1064/1200/800",
+            "https://picsum.photos/id/1065/1200/800",
+          ],
+        },
+        {
+          type: "links",
+          label: "Links",
+        },
+        {
+          type: "metrics",
+          label: "Performance",
+          metrics: [
+            { label: "API Reliability", value: "98%" },
+            { label: "Database Integrity", value: "High" },
+            { label: "Scalability", value: "Enterprise Ready" },
+          ],
+        },
+        {
+          type: "richtext",
+          label: "Learnings",
+          html:
+            "<ul><li>Built enterprise-grade Angular components</li><li>Designed REST APIs with ASP.NET</li><li>Optimized SQL queries for large datasets</li><li>Implemented role-based access control</li></ul>",
+        },
+      ],
+    },
+
+
 ];
 
 (async () => {
