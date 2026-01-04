@@ -8,6 +8,7 @@ import morgan from "morgan";
 
 // Routes
 import projectsRouter from "./routes/projects.js";
+
 import teamRouter from "./routes/team.js";
 
 // Load environment variables
@@ -18,6 +19,9 @@ const app = express();
 /* =========================
    GLOBAL MIDDLEWARE (TOP)
 ========================= */
+
+// Body parser
+app.use(express.json({ limit: "1mb" }));
 
 // CORS – must be FIRST
 app.use(
