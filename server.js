@@ -5,48 +5,57 @@ import dotenv from "dotenv";
 import cors from "cors";
 import helmet from "helmet";
 import morgan from "morgan";
-import "dotenv/config";
-import cors from "cors";
 
-
-
+// Routes
 import projectsRouter from "./routes/projects.js";
-
-
 import teamRouter from "./routes/team.js";
 
+// Load environment variables
 dotenv.config();
 
 const app = express();
 
-/* Middleware */
-app.use(helmet());                         // security headers
-app.use(morgan("dev"));                    // request logs
-app.use(express.json({ limit: "1mb" }));   // JSON body parsing
+/* =========================
+   GLOBAL MIDDLEWARE (TOP)
+========================= */
+
+// CORS – must be FIRST
 app.use(
   cors({
-    origin: (origin, cb) => cb(null, true) // allow all in dev
-    // origin: process.env.CORS_ORIGIN?.split(",") ?? "*", // stricter option
-  })
-);
-app.use(
-  cors({
-    origin: [
-      "http://localhost:5173",          // local dev
-      "https://nexlume-ten.vercel.app"   // live frontend
-    ],
-    methods: ["GET", "POST", "PUT", "DELETE"],
-    credentials: true,
+    origin: true,          // allow all origins (safe for dev)
+    credentials: true
   })
 );
 
-/* Routes */
-app.get("/api/health", (req, res) => res.json({ ok: true }));
-app.use("/api/team", teamRouter);
+// Handle preflight requests
+app.options("*", cors());
+
+// Security headers
+app.use(helmet());
+
+// Logger
+app.use(morgan("dev"));
+
+// Body parser
+app.use(express.json({ limit: "1mb" }));
+
+/* =========================
+   ROUTES
+========================= */
+
+// Health check
+app.get("/api/health", (req, res) => {
+  res.status(200).json({ ok: true });
+});
+
+// API routes
 app.use("/api/projects", projectsRouter);
+app.use("/api/team", teamRouter);
 
+/* =========================
+   DATABASE & SERVER START
+========================= */
 
-/* Start with Mongo */
 const PORT = process.env.PORT || 5000;
 
 mongoose
@@ -54,7 +63,7 @@ mongoose
   .then(() => {
     console.log("✅ MongoDB connected");
     app.listen(PORT, () => {
-      console.log(`🚀 API running at http://localhost:${PORT}`);
+      console.log(`🚀 API running on port ${PORT}`);
     });
   })
   .catch((err) => {
