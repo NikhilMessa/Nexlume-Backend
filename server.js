@@ -22,10 +22,12 @@ const app = express();
 // CORS – must be FIRST
 app.use(
   cors({
-    origin: true,          // allow all origins (safe for dev)
-    credentials: true
+    origin: "http://localhost:5173",
+    methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
+    allowedHeaders: ["Content-Type", "Authorization"],
   })
 );
+
 
 // Handle preflight requests
 app.options("*", cors());
