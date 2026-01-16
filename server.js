@@ -9,41 +9,34 @@ import morgan from "morgan";
 
 import projectsRouter from "./routes/projects.js";
 import teamRouter from "./routes/team.js";
-
-
-// Load environment variables
-dotenv.config();
+import contactRouter from "./routes/contact.js";
 
 const app = express();
 
 /* =========================
-   GLOBAL MIDDLEWARE (TOP)
+   GLOBAL MIDDLEWARE
 ========================= */
 
 // Body parser
 app.use(express.json({ limit: "1mb" }));
 
-// CORS – must be FIRST
+// CORS (dev + prod)
 app.use(
   cors({
-    origin: "http://localhost:5173",
+    origin: process.env.CORS_ORIGIN || "http://localhost:5173",
     methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
     allowedHeaders: ["Content-Type", "Authorization"],
   })
 );
 
-
-// Handle preflight requests
+// Preflight
 app.options("*", cors());
 
-// Security headers
+// Security
 app.use(helmet());
 
 // Logger
 app.use(morgan("dev"));
-
-// Body parser
-app.use(express.json({ limit: "1mb" }));
 
 /* =========================
    ROUTES
@@ -57,6 +50,7 @@ app.get("/api/health", (req, res) => {
 // API routes
 app.use("/api/projects", projectsRouter);
 app.use("/api/team", teamRouter);
+app.use("/api/contact", contactRouter); // ✅ IMPORTANT
 
 /* =========================
    DATABASE & SERVER START
@@ -64,8 +58,7 @@ app.use("/api/team", teamRouter);
 
 const PORT = process.env.PORT || 5001;
 
-console.log("ENV CHECK:", process.env.RESEND_API_KEY);
-
+console.log("ENV CHECK (RESEND):", process.env.RESEND_API_KEY);
 
 mongoose
   .connect(process.env.MONGODB_URI)
