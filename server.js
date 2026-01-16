@@ -1,15 +1,15 @@
-// server.js
+import dotenv from "dotenv";
+dotenv.config({ path: "./.env" }); // MUST be first
+
 import express from "express";
 import mongoose from "mongoose";
-import dotenv from "dotenv";
 import cors from "cors";
 import helmet from "helmet";
 import morgan from "morgan";
 
-// Routes
 import projectsRouter from "./routes/projects.js";
-
 import teamRouter from "./routes/team.js";
+
 
 // Load environment variables
 dotenv.config();
@@ -62,7 +62,10 @@ app.use("/api/team", teamRouter);
    DATABASE & SERVER START
 ========================= */
 
-const PORT = process.env.PORT || 5000;
+const PORT = process.env.PORT || 5001;
+
+console.log("ENV CHECK:", process.env.RESEND_API_KEY);
+
 
 mongoose
   .connect(process.env.MONGODB_URI)
