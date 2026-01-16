@@ -1,4 +1,4 @@
-import Team from "../models/team";
+import Team from "../models/team.js";
 import { Resend } from "resend";
 
 export const enrollTeam = async (req, res) => {
