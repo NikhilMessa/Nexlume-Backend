@@ -1,4 +1,5 @@
 import dotenv from "dotenv";
+
 dotenv.config({ path: "./.env" }); // MUST be first
 
 import express from "express";
@@ -20,10 +21,30 @@ const app = express();
 // Body parser
 app.use(express.json({ limit: "1mb" }));
 
-// CORS (dev + prod)
+// CORS (dev + prod) - Updated to support multiple origins
+const allowedOrigins = process.env.CORS_ORIGINS
+  ? process.env.CORS_ORIGINS.split(',').map(origin => origin.trim())
+  : [
+      'http://localhost:5173',
+      'https://nexlume-xyxr.onrender.com',
+      'http://localhost:3000',
+      'http://127.0.0.1:5173',
+    ];
+
 app.use(
   cors({
-    origin: process.env.CORS_ORIGIN || "http://localhost:5173",
+    origin: function (origin, callback) {
+      // Allow requests with no origin (like mobile apps, Postman, or curl)
+      if (!origin) return callback(null, true);
+      
+      if (allowedOrigins.indexOf(origin) !== -1) {
+        callback(null, true);
+      } else {
+        console.warn(`⚠️  CORS blocked origin: ${origin}`);
+        callback(new Error('Not allowed by CORS'));
+      }
+    },
+    credentials: true,
     methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
     allowedHeaders: ["Content-Type", "Authorization"],
   })
@@ -59,6 +80,7 @@ app.use("/api/contact", contactRouter); // ✅ IMPORTANT
 const PORT = process.env.PORT || 5001;
 
 console.log("ENV CHECK (RESEND):", process.env.RESEND_API_KEY);
+console.log("🌐 Allowed CORS Origins:", allowedOrigins);
 
 mongoose
   .connect(process.env.MONGODB_URI)
@@ -72,3 +94,4 @@ mongoose
     console.error("❌ MongoDB connection error:", err.message);
     process.exit(1);
   });
+
