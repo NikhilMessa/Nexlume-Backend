@@ -27,6 +27,7 @@ const allowedOrigins = process.env.CORS_ORIGINS
   : [
       'http://localhost:5173',
       'https://nexlume-xyxr.onrender.com',
+      'https://nexlume.netlify.app',
       'http://localhost:3000',
       'http://127.0.0.1:5173',
     ];
@@ -71,6 +72,7 @@ app.get("/api/health", (req, res) => {
 // API routes
 app.use("/api/projects", projectsRouter);
 app.use("/api/team", teamRouter);
+app.use("/api/teams", teamRouter); // keep backward compatibility with frontend plural path
 app.use("/api/contact", contactRouter); // ✅ IMPORTANT
 
 /* =========================
