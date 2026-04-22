@@ -4,6 +4,49 @@ import Project from "../models/Project.js";
 
 const router = express.Router();
 
+function optimizeCloudinaryUrl(url, options = {}) {
+  if (typeof url !== "string") return url;
+  if (!url.includes("res.cloudinary.com") || !url.includes("/upload/")) return url;
+
+  const transforms = [
+    "f_auto",
+    "q_auto",
+    options.width ? `w_${options.width}` : null,
+    options.height ? `h_${options.height}` : null,
+    options.crop || null,
+    "dpr_auto",
+  ]
+    .filter(Boolean)
+    .join(",");
+
+  return url.replace("/upload/", `/upload/${transforms}/`);
+}
+
+function optimizeProjectImages(project) {
+  const item = project.toObject ? project.toObject() : project;
+
+  return {
+    ...item,
+    imageOriginal: item.image,
+    image: optimizeCloudinaryUrl(item.image, { width: 960, crop: "c_limit" }),
+    screenshots: Array.isArray(item.screenshots)
+      ? item.screenshots.map((src) =>
+          optimizeCloudinaryUrl(src, { width: 1200, crop: "c_limit" })
+        )
+      : item.screenshots,
+    cards: Array.isArray(item.cards)
+      ? item.cards.map((card) => ({
+          ...card,
+          images: Array.isArray(card.images)
+            ? card.images.map((src) =>
+                optimizeCloudinaryUrl(src, { width: 1200, crop: "c_limit" })
+              )
+            : card.images,
+        }))
+      : item.cards,
+  };
+}
+
 /** GET /api/projects?limit=&page= */
 router.get("/", async (req, res) => {
   try {
@@ -20,7 +63,7 @@ router.get("/", async (req, res) => {
     ]);
 
     res.json({
-      data: items,
+      data: items.map(optimizeProjectImages),
       pagination: {
         total,
         page,
@@ -42,7 +85,7 @@ router.get("/:id", async (req, res) => {
       { _id: 0, __v: 0 }
     );
     if (!item) return res.status(404).json({ error: "Not found" });
-    res.json(item);
+    res.json(optimizeProjectImages(item));
   } catch (err) {
     console.error(err);
     res.status(500).json({ error: "Failed to fetch project" });
