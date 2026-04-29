@@ -27,9 +27,13 @@ function optimizeProjectImages(project) {
 
   return {
     ...item,
-    imageOriginal: item.image,
-    image: optimizeCloudinaryUrl(item.image, { width: 960, crop: "c_limit" }),
-    screenshots: Array.isArray(item.screenshots)
+    image: item.image,
+    imageOptimized: optimizeCloudinaryUrl(item.image, {
+      width: 960,
+      crop: "c_limit",
+    }),
+    screenshots: item.screenshots,
+    screenshotsOptimized: Array.isArray(item.screenshots)
       ? item.screenshots.map((src) =>
           optimizeCloudinaryUrl(src, { width: 1200, crop: "c_limit" })
         )
@@ -37,12 +41,13 @@ function optimizeProjectImages(project) {
     cards: Array.isArray(item.cards)
       ? item.cards.map((card) => ({
           ...card,
-          images: Array.isArray(card.images)
-            ? card.images.map((src) =>
-                optimizeCloudinaryUrl(src, { width: 1200, crop: "c_limit" })
-              )
-            : card.images,
-        }))
+        images: card.images,
+        imagesOptimized: Array.isArray(card.images)
+          ? card.images.map((src) =>
+              optimizeCloudinaryUrl(src, { width: 1200, crop: "c_limit" })
+            )
+          : card.images,
+      }))
       : item.cards,
   };
 }
