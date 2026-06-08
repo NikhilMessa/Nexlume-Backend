@@ -6,7 +6,8 @@
   "scripts": {
     "dev": "nodemon server.js",
     "start": "node server.js",
-    "seed": "node seed/seed.js"
+    "seed": "node seed/seed.js",
+     "seed:team": "node seed/teamMembers.js"
   },
   "dependencies": {
     "@getbrevo/brevo": "^3.0.1",

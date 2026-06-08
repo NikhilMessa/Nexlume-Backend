@@ -11,6 +11,8 @@ import morgan from "morgan";
 import projectsRouter from "./routes/projects.js";
 import teamRouter from "./routes/team.js";
 import contactRouter from "./routes/contact.js";
+import teamMemberRoutes from "./routes/teamMember.js";
+
 
 const app = express();
 
@@ -61,6 +63,15 @@ app.use(helmet());
 app.use(morgan("dev"));
 
 /* =========================
+   STATIC FILES
+========================= */
+
+app.use(
+  "/uploads",
+  helmet({ crossOriginResourcePolicy: { policy: "cross-origin" } }),
+  express.static("public")
+);
+/* =========================
    ROUTES
 ========================= */
 
@@ -71,9 +82,10 @@ app.get("/api/health", (req, res) => {
 
 // API routes
 app.use("/api/projects", projectsRouter);
-app.use("/api/team", teamRouter);
-app.use("/api/teams", teamRouter); // keep backward compatibility with frontend plural path
-app.use("/api/contact", contactRouter); // ✅ IMPORTANT
+app.use("/api/team", teamRouter);       // email enroll
+app.use("/api/teams", teamRouter);      // old support
+app.use("/api/contact", contactRouter);
+app.use("/api/team-members", teamMemberRoutes); // team cards
 
 /* =========================
    DATABASE & SERVER START
