@@ -30,7 +30,7 @@ const members = [
     url: "https://www.linkedin.com/in/amanmishra107/",
   },
   {
-    image: "/uploads/team/Mansi.jpg",
+    image: "/uploads/team/Mansi.jpeg",
     title: "Mansi Kumbhar",
     role: "Product Manager",
     handle: "@mansikumbhar",
