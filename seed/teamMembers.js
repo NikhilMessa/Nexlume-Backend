@@ -24,9 +24,9 @@ const members = [
   {
     image: "/uploads/team/aman.jpg",
     title: "Aman Mishra",
-    role: "Project Manager",
+    role: "Business Analyst",
     handle: "@amanmishra",
-    bio: "Ensuring smooth execution of projects by managing timelines, teams, and deliverables.",
+    bio: "Translating client requirements into clear and effective solutions.",
     url: "https://www.linkedin.com/in/amanmishra107/",
   },
   {
