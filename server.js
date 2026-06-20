@@ -33,6 +33,8 @@ const allowedOrigins = process.env.CORS_ORIGINS
       'http://localhost:3000',
       'http://127.0.0.1:5173',
       'https://nexlume-dev.netlify.app',
+      'http://192.168.29.84:5173/',
+
     ];
 
 app.use(

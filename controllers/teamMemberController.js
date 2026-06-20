@@ -2,7 +2,7 @@ import TeamMember from "../models/TeamMember.js";
 
 export const getTeamMembers = async (req, res) => {
   try {
-    const members = await TeamMember.find().sort({ createdAt: 1 });
+    const members = await TeamMember.find().sort({ order: 1 });
 
     res.status(200).json({
       success: true,

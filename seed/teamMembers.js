@@ -6,6 +6,7 @@ dotenv.config();
 
 const members = [
   {
+    order: 1,
     image: "/uploads/team/messa.jpg",
     title: "Nikhil Messa",
     role: "Tech Lead",
@@ -14,6 +15,7 @@ const members = [
     url: "https://www.linkedin.com/in/nikhil-messa/",
   },
   {
+    order: 2,
     image: "/uploads/team/Pk.jpg",
     title: "Prajwal Kolure",
     role: "Creative Director",
@@ -22,6 +24,7 @@ const members = [
     url: "https://www.linkedin.com/in/prajwal-k-956865328/",
   },
   {
+    order: 3,
     image: "/uploads/team/aman.jpg",
     title: "Aman Mishra",
     role: "Business Analyst",
@@ -30,6 +33,7 @@ const members = [
     url: "https://www.linkedin.com/in/amanmishra107/",
   },
   {
+    order: 4,
     image: "/uploads/team/Mansi.jpeg",
     title: "Mansi Kumbhar",
     role: "Product Manager",
@@ -39,6 +43,7 @@ const members = [
     imagePosition: "center 35%",
   },
   {
+    order: 5,
     image: "/uploads/team/ravi.jpg",
     title: "Ravindra Patil",
     role: "Product Engineer",
@@ -47,6 +52,7 @@ const members = [
     url: "https://www.linkedin.com/in/ravindra-patil-3a2876250/",
   },
   {
+    order: 6,
     image: "/uploads/team/sanju.jpg",
     title: "Sanjit Prajapati",
     role: "UI/UX Specialist",
@@ -55,6 +61,7 @@ const members = [
     url: "https://www.linkedin.com/in/sanjit-prajapati-5420a9222/",
   },
   {
+    order: 7,
     image: "/uploads/team/anna.jpg",
     title: "Sanath Shetty",
     role: "Full Stack Developer",
@@ -63,11 +70,12 @@ const members = [
     url: "#",
   },
   {
+    order: 8,
     image: "/uploads/team/Shraddha.jpeg",
     title: "Shraddha Chauhan",
     role: "Creative Strategist",
     handle: "@shraddhachauhan",
-    bio: "Using creative strategies for brand growth, enhancing client engagement and reach.",
+    bio: "Delivering creative strategies that drive growth",
     url: "https://www.linkedin.com/in/shraddha-chauhan017-532044223/",
     imagePosition: "center 42%",
   },

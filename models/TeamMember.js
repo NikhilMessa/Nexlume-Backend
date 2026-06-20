@@ -9,6 +9,11 @@ const teamMemberSchema = new mongoose.Schema(
     bio: { type: String },
     url: { type: String, default: "#" },
     imagePosition: { type: String, default: "center 30%" },
+
+    order: {
+      type: Number,
+      default: 999,
+    },
   },
   { timestamps: true }
 );
